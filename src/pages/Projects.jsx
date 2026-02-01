@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { X } from "lucide-react";
 import Featured from "../assets/Featured.png";
 import Portfolio from "../assets/Portfolio.png";
+import Oxiwell from "../assets/Oxiwell.png";
+import TrenZo from "../assets/TrenZo.png";
+import OrbitIQ from "../assets/OrbitIQ.png";
+import StayZo from "../assets/StayZo.png";
 
 const projects = [
   {
     id: "LMS SaaS",
     title: "Learning Management SaaS",
-    desc: "A scalable compact SaaS dashboard with role-based auth and real-time analytics.",
+    desc: "A multi-tenant LMS platform with real-time analytics and role-based authentication.",
     tag: "Featured Project",
     image: Featured,
     github: "https://github.com/Khyruddin-Hashanulla/thenextera.git",
@@ -22,22 +26,28 @@ const projects = [
         "Progress Tracking",
         "Admin Dashboard",
         "Student, Teacher Roles",
+        "Real-Time Analytics",
+        "Modular Architecture",
+        "Responsive Design",
+        "RESTful APIs",
+        "Cloud Deployment",
       ],
-      tech: ["React", "Tailwind", "Node", "MongoDB"],
+      tech: ["React", "Tailwind", "Node.js", "MongoDB", "JWT", "Express"],
     },
   },
   {
-    id: "mern-auth",
-    title: "MERN Auth System",
-    desc: "JWT authentication with role-based access and secure APIs.",
+    id: "Healthcare-management",
+    title: "Oxiwell",
+    desc: "Healthcare Management System for patient records, appointments and staff.",
     tag: "Backend + Frontend",
-    github: "#",
-    live: "#",
+    image: Oxiwell,
+    github: "https://github.com/Khyruddin-Hashanulla/Oxiwell.git",
+    live: "https://oxiwell.onrender.com",
     details: {
       overview:
-        "Secure authentication system with refresh tokens, RBAC, and protected APIs.",
+        "A full-featured healthcare management system that streamlines patient records, appointment scheduling, and medical staff management. Designed to improve efficiency and patient care in medical facilities. Patients can book appointments, view medical history, and communicate with healthcare providers. Medical staff can manage patient records, schedule appointments, and access analytics. Admins have control over user roles and system settings.Doctors can view their schedules, patient details, and update medical records.",
       features: ["JWT + Refresh Tokens", "RBAC", "Secure APIs"],
-      tech: ["React", "Express", "MongoDB"],
+      tech: ["React", "Express", "MongoDB", "JWT", "Node.js"],
     },
   },
   {
@@ -51,65 +61,85 @@ const projects = [
     details: {
       overview:
         "Portfolio site with cinematic motion and smooth transitions. Showcases projects elegantly. Show education experience and skills with interactive elements and animations.",
-      features: ["Shared Layout Animations", "Scroll FX", "Glassmorphism"],
-      tech: ["React", "Framer Motion"],
+      features: [
+        "Shared Layout Animations",
+        "Scroll FX",
+        "Glassmorphism",
+        "Responsive Design",
+        "Dark Mode",
+        "Typewriter Effect",
+        "Lazy Loading",
+      ],
+      tech: ["HTML", "CSS", "JavaScript"],
     },
   },
   {
-    id: "realtime-chat",
-    title: "Real-Time Chat Application",
-    desc: "A real-time messaging platform with private chats, groups and live presence.",
+    id: "Space Data & Mission Tracker",
+    title: "OrbitIQ",
+    desc: "Real-time space data and mission tracker with 3D visualization.",
     tag: "Fullstack Project",
-    github: "#",
-    live: "#",
+    image: OrbitIQ,
+    github: "https://github.com/Khyruddin-Hashanulla/OrbitIQ.git",
+    live: "https://orbitiq.onrender.com",
     details: {
       overview:
-        "A scalable real-time chat application supporting private and group conversations with live online status and message delivery.",
+        "A real-time space data and mission tracker with 3D visualization. Provides up-to-date information on satellites, space missions, and celestial events. Users can explore interactive 3D models of spacecraft and track their orbits in real-time.Data is sourced from public space APIs and presented with engaging visualizations.Users can search for specific missions, view satellite trajectories, and access detailed information about space events. The platform includes a 3D globe visualization powered by Three.js, allowing users to see satellite positions and orbits in an interactive manner. Satellite tracking with real-time updates on positions and trajectories.",
       features: [
-        "WebSocket / Socket.IO",
-        "Typing Indicators",
-        "Online Presence",
-        "Message Read Receipts",
+        "3D Visualization",
+        "Real-Time Data",
+        "Satellite Tracking",
+        "Mission Details",
+        "Interactive Globe",
+        "Responsive Design",
+        "API Integration",
+        "Search Functionality",
       ],
-      tech: ["React", "Node", "Socket.IO", "MongoDB"],
+      tech: ["React", "Node", "Express", "MongoDB", "NASA APIs", "Three.js", "Tailwind", "NY20"],
     },
   },
   {
-    id: "ai-resume-analyzer",
-    title: "AI Resume Analyzer",
-    desc: "An AI-powered tool that analyzes resumes and provides smart insights.",
-    tag: "AI + Frontend",
-    github: "#",
-    live: "#",
+    id: "Tourism Website",
+    title: "StayZo",
+    desc: "Tourism website for booking and exploring destinations.",
+    tag: "Fullstack Project",
+    image: StayZo,
+    github: "https://github.com/Khyruddin-Hashanulla/StayZo.git",
+    live: "https://stayzo-46kr.onrender.com",
     details: {
       overview:
-        "An intelligent resume analysis platform that evaluates resumes using AI and provides actionable insights and scoring.",
+        "A tourism website for booking accommodations and exploring travel destinations. Users can search for hotels, read reviews, and make reservations. The platform offers destination guides, travel tips, and personalized recommendations based on user preferences.Users can browse accommodations by location, price, and amenities. Detailed listings include photos, descriptions, and user reviews. The booking system allows users to check availability, select dates, and complete reservations securely. Admins can manage listings, bookings, and user accounts through a dedicated dashboard. The website features a responsive design for optimal viewing on all devices.",
       features: [
-        "Resume Parsing",
-        "AI Skill Matching",
-        "ATS Score Analysis",
-        "PDF Upload Support",
+        "Accommodation Search",
+        "Booking System",
+        "User Reviews",
+        "Destination Guides",
+        "Responsive Design",
       ],
-      tech: ["React", "Tailwind", "OpenAI API", "Node"],
+      tech: ["HTML","CSS", "Java Script" , "JWT Authentication", "RESTful APIs", "Cloudinary"],
     },
   },
   {
     id: "ecommerce-admin",
-    title: "E-Commerce Admin Panel",
-    desc: "A powerful admin dashboard for managing products, orders and users.",
+    title: "TrenZo",
+    desc: "E-commerce Admin Dashboard for inventory, orders, users and analytics.",
     tag: "Dashboard System",
-    github: "#",
-    live: "#",
+    image: TrenZo,
+    github: "https://github.com/Khyruddin-Hashanulla/TrenZo.git",
+    live: "https://trenzo-rouge.vercel.app",
     details: {
       overview:
-        "A full-featured e-commerce admin dashboard for managing inventory, orders, users and analytics.",
+        "A full-featured e-commerce admin dashboard for managing inventory, orders, users and analytics. Provides insights and control over online store operations. Admins can manage products, track orders, view sales analytics, and handle user accounts. The dashboard includes charts and reports for sales performance and inventory levels. Responsive design ensures usability across devices. Authentication and role-based access control secures sensitive data and actions.",
       features: [
         "Product Management",
         "Order Tracking",
         "Role-Based Access",
         "Sales Analytics",
+        "User Management",
+        "Responsive Design",
+        "RESTful APIs",
+        "Cloud Deployment",
       ],
-      tech: ["React", "Tailwind", "Node", "PostgreSQL"],
+      tech: ["React", "Tailwind", "Next.js", "PostgreSQL", "Inngest", "Prisma", "Clerk", "Neon", "Cloudinary"],
     },
   },
 ];
@@ -247,7 +277,7 @@ export default function Projects() {
 
                 {/* LINKS */}
 
-                <motion.div className="flex gap-6 mt-6 opacity-0 group-hover:opacity-100 transition duration-500">
+                <motion.div className="flex gap-6 mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
                   {p.github && (
                     <a
                       href={p.github}

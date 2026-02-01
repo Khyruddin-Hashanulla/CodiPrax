@@ -1,11 +1,15 @@
-import React from 'react'
+import Templet from "../components/Templet";
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
   return (
-    <div className="w-full flex-col h-100vh min-h-screen bg-[#f6f7fb] flex items-center justify-center ">
-      Login Page
-    </div>
-  )
-}
+    <Templet
+      Title="Login to CodiPrax"
+      Heading="Welcome Back!"
+      Description="Login to access your account and continue your journey with us."
+      FormType="login"
+      setIsLoggedIn={setIsLoggedIn}
+    />
+  );
+};
 
-export default Login
+export default Login;

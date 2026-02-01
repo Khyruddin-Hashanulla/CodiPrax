@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/CodiPrax.png";
 import { motion } from "framer-motion";
 
-const Navbar = ({ isLoggedIn }) => {
+const Navbar = ({ isLoggedIn,setIsLoggedIn }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const clickHandler = () => {
     setMenuOpen(false);
@@ -79,14 +79,17 @@ const Navbar = ({ isLoggedIn }) => {
           {isLoggedIn && (
             <>
               <Link
-                to="/blog"
+                to="/services"
                 className="border-2 border-b-black border-t-black px-3 py-1 rounded-full hover:bg-white/10"
               >
-                Blog
+                Services
               </Link>
               <Link
                 to="/"
                 className="border-2 border-b-black border-t-black px-3 py-1 rounded-full hover:bg-white/10"
+                onClick={()=>{
+                  setIsLoggedIn(false)
+                }}
               >
                 Logout
               </Link>
@@ -165,15 +168,18 @@ const Navbar = ({ isLoggedIn }) => {
             {isLoggedIn && (
               <>
                 <Link
-                  to="/#blog"
+                  to="/#services"
                   onClick={clickHandler}
                   className="border-2 border-b-emerald-400 border-t-emerald-400 px-3 py-2 rounded-lg"
                 >
-                  Blog
+                  Services
                 </Link>
                 <Link
                   to="/"
-                  onClick={clickHandler}
+                  onClick={()=>{
+                  setIsLoggedIn(false)
+                  setMenuOpen(false);
+                }}
                   className="border-2 border-b-emerald-400 border-t-emerald-400  px-3 py-2 rounded-lg"
                 >
                   Logout

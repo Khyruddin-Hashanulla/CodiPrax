@@ -18,7 +18,6 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiRedux } from "react-icons/si";
 import About from "./About";
 import Projects from "./Projects";
-import Blog from "./Blog";
 import Contact from "./Contact";
 
 const Home = () => {
@@ -228,25 +227,28 @@ const Home = () => {
 
       {/* ABOUT-SECTION */}
 
-      <section id="about" className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-38">
+      <section
+        id="about"
+        className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-38"
+      >
         <About />
       </section>
 
       {/* PROJECTS-SECTION */}
 
-      <section id="projects" className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-16">
+      <section
+        id="projects"
+        className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-16"
+      >
         <Projects />
       </section>
 
-      {/* BLOG-SECTION */}
-
-      {/* <section id="blog" className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-16">
-        <Blog />
-      </section> */}
-
       {/* CONTACT-SECTION */}
 
-      <section id="contact" className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-16">
+      <section
+        id="contact"
+        className="w-full min-h-screen bg-[#f6f7fb] scroll-mt-16"
+      >
         <Contact />
       </section>
     </div>
